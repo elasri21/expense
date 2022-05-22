@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Barlow:wght@600&family=Cairo:wght@300;400;600&family=Commissioner:wght@400;500;700&family=Epilogue:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,900;1,9..144,700&family=Josefin+Sans:wght@300&family=Manrope:wght@800&family=Open+Sans:wght@400;600;700&family=Outfit:wght@400;700&family=Overpass:wght@300;600&family=Poppins:wght@500;700&family=Rubik:wght@400;700&display=swap");
+/*rules*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  background-color: #f8e9dd;
+  overflow: hidden;
+}
+body .app {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px;
+  margin-bottom: 60px;
+}
+@media (max-width: 350px) {
+  body .app {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body .app .app-body .week .days-price {
+    width: 25px !important;
+  }
+}
+@media (min-width: 351px) and (max-width: 440px) {
+  body .app {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body .app .app-body .week .days-price {
+    width: 35px !important;
+  }
+}
+@media (min-width: 441px) and (max-width: 500px) {
+  body .app {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body .app .app-body .week .days-price {
+    width: 40px !important;
+  }
+}
+@media (min-width: 501px) and (max-width: 599px) {
+  body .app {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body .app .app-body .week .days-price {
+    width: 45px !important;
+  }
+}
+body .app .head {
+  width: 100%;
+  background-color: #ec775f;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+body .app .head .balance p {
+  color: white;
+  text-align: left;
+}
+body .app .head .balance p.name {
+  font-size: .8em;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+body .app .head .balance p.amount {
+  font-size: 1.1em;
+  font-weight: 400;
+}
+body .app .app-body {
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+body .app .app-body h2 {
+  color: #382314;
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-bottom: 60px;
+}
+body .app .app-body .week {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 0.5px solid #93867b;
+  padding-bottom: 60px;
+  height: 150px;
+}
+body .app .app-body .week .days-price {
+  cursor: pointer;
+  position: relative;
+  width: 50px;
+  background-color: #ec775f;
+  border-radius: 4px;
+  transition: .4s ease-in-out;
+}
+body .app .app-body .week .days-price:hover {
+  background-color: rgba(236, 119, 95, 0.6);
+}
+body .app .app-body .week .days-price:hover.wed {
+  background-color: rgba(118, 181, 188, 0.6);
+}
+body .app .app-body .week .days-price:hover .price {
+  opacity: 1;
+}
+body .app .app-body .week .days-price.mon {
+  height: calc(17.45% * 2 );
+}
+body .app .app-body .week .days-price.tue {
+  height: calc(34.91% * 2 );
+}
+body .app .app-body .week .days-price.wed {
+  height: calc(52.36% * 2 );
+  background-color: #76b5bc;
+}
+body .app .app-body .week .days-price.thu {
+  height: calc(31.07% * 2 );
+}
+body .app .app-body .week .days-price.fri {
+  height: calc(23.39% * 2 );
+}
+body .app .app-body .week .days-price.sat {
+  height: calc(43.28% * 2 );
+}
+body .app .app-body .week .days-price.san {
+  height: calc(25.48% * 2 );
+}
+body .app .app-body .week .days-price .price {
+  position: absolute;
+  top: -30px;
+  background-color: #382314;
+  color: white;
+  font-size: .6em;
+  padding: 5px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+body .app .app-body .week .days-price .day {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .8em;
+  color: #93867b;
+}
+body .app .app-body .show-total {
+  padding: 30px 20px 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+body .app .app-body .show-total .total p {
+  font: .5em;
+  color: #93867b;
+}
+body .app .app-body .show-total .total p.todal-amount {
+  font-size: 1em;
+  font-weight: 700;
+  color: #382314;
+}
+body .app .app-body .show-total .growing p {
+  font: .5em;
+  color: #93867b;
+}
+body .app .app-body .show-total .growing p.percent {
+  font-size: 1em;
+  font-weight: 700;
+  color: #382314;
+}
+
+/*attribution*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=main.css.map */
